@@ -1,10 +1,28 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from   './router'
+
+//导入网络请求模块
+import './network/axios'
+
+//导入elementui组件
+import './plugins/index.js'
+
+
+//导入全局样式表
+import'./assets/css/global.css'
+
+// 导入字体图标
+import './assets/fonts/iconfont.css'
+
+
+
 
 Vue.config.productionTip = false
+
+
 
 new Vue({
   router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount( '#app')
