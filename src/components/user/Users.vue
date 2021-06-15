@@ -8,7 +8,7 @@
     </el-breadcrumb> 
     <!-- 卡片视图区 --> 
     <el-card id="boxacard">  
-        <!-- 搜素与添加区域 -->              
+        <!-- 搜素与添加区 -->              
         <el-row :gutter="20"> 
           <el-col :span="7"> 
                 <el-input 
