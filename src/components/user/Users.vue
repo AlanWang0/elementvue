@@ -6,13 +6,13 @@
         <el-breadcrumb-item>用户管理</el-breadcrumb-item> 
         <el-breadcrumb-item>用户列表</el-breadcrumb-item> 
     </el-breadcrumb> 
-    <!-- 卡片视图区域 --> 
+    <!-- 卡片视图区 --> 
     <el-card id="boxacard">  
         <!-- 搜素与添加区域 -->              
         <el-row :gutter="20"> 
           <el-col :span="7"> 
                 <el-input 
-                placeholder="请输入内容" 
+                placeholder="请输入_内容" 
                 v-model="queryInfo.query" 
                 clearable 
                 @clear="getUserList"> 
