@@ -16,7 +16,7 @@ import Categories from "../components/goods/Categories.vue"
 import Params from "../components/goods/Params.vue"
 import List from "../components/goods/List.vue"
 import Order from "../components/order/Order.vue"
-import DataView from "../views/DataView.vue"
+import DataView from "../components/dataview/DataView.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
     path:'/home',
     name:"Home",
     component:Home,
-    redirect:'/welcome',
+    redirect:'/goods',
     children:[
       {path:'/welcome',component:Welcome},
       {path:'/users',component:Users},
@@ -44,14 +44,12 @@ const routes = [
       {path:'/categories',component:Categories},
       {path:'/params',component:Params},
       {path:'/goods',component:List},
-      {path:'/orders',component:Order}
+      {path:'/orders',component:Order},
+      {path: '/reports',component: DataView}
       
     ]
-  },
-  {
-    path: '/dataview',
-    component: DataView
   }
+  
 
 
 ]

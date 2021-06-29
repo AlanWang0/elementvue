@@ -9,3 +9,6 @@ html,body,#app{
 .el-pagination{
     margin-top:15px;
 }
+.el-card {
+    margin:20px;
+}

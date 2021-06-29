@@ -25,7 +25,10 @@ Switch,
 Tooltip,
 Pagination,
 Dialog,
-MessageBox
+MessageBox,
+Tag,
+Alert,
+Tree
 } from 'element-ui'
 
 //注册为全局组件，在哪里都可以使用
@@ -52,5 +55,8 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Alert)
+Vue.use(Tree)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm

@@ -2,7 +2,7 @@
   <div> 
     <!-- 面包屑导航区域 --> 
     <el-breadcrumb separator-class="el-icon-arrow-right"> 
-        <el-breadcrumb-item :to="{ path: '/welcome' }">首页</el-breadcrumb-item> 
+        <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item> 
         <el-breadcrumb-item>用户管理</el-breadcrumb-item> 
         <el-breadcrumb-item>用户列表</el-breadcrumb-item> 
     </el-breadcrumb> 
@@ -14,6 +14,7 @@
                 <el-input 
                 placeholder="请输入_内容" 
                 v-model="queryInfo.query" 
+                @keyup.enter.native="getUserList"
                 clearable 
                 @clear="getUserList"> 
                 <el-button slot="append" icon="el-icon-search" @click="getUserList"></el-button>
@@ -39,8 +40,8 @@
                       @change="userStateChanged(scope.row)">
                     </el-switch>
                 </template>
-            </el-table-column>
-            <el-table-column  label="操作"  width="180px">
+            </el-table-column> 
+            <el-table-column  label="操作"  width="180px">   
                 <template slot-scope="scope">                  
                   <el-button size="mini" round type="primary"
                    icon="el-icon-edit" v-model="scope.row"
